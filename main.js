@@ -107,4 +107,7 @@ document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{filt=b.datase
 $('#readAll').onclick=()=>{alerts.forEach(a=>a.u=false);renderAlerts()};
 renderAlerts();
 go('home');
-$('#theme').onclick=()=>{const r=document.documentElement;const dark=getComputedStyle(r).getPropertyValue('--bg').trim()==='#0a1a20';r.dataset.theme=dark?'light':'dark'};
+try{const s=localStorage.getItem('hubbub-theme');if(s)document.documentElement.dataset.theme=s}catch(e){}
+const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches};
+const toggleTheme=()=>{const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('hubbub-theme',t)}catch(e){}};
+$('#theme').onclick=toggleTheme;$('#themeTab').onclick=toggleTheme;

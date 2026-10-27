@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hubbub - the new space for hangouts</title>
+<title>Hubbub – social feed and chat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
   <button id="navChat" data-go="chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg><span>Messages</span></button>
   <button class="post-btn" id="focusPost"><span>New post</span></button>
   <div class="me"><div class="av a5">AD</div><div><b>Adarsh</b><small>@adarsh</small></div></div>
-  <button class="theme" id="theme">Switch light / dark</button>
+  <button class="theme" id="theme" aria-label="Switch between light and dark mode"><svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg><span>Light / dark</span></button>
  </nav>
 
  <main class="panel feed" aria-label="Feed">
@@ -61,7 +61,7 @@
   <form class="send" id="form"><input id="msgIn" placeholder="Message Mira" aria-label="Message" autocomplete="off"><button class="btn">Send</button></form>
  </aside>
 </div>
-<div class="tabs"><button data-go="home">Home</button><button data-go="explore">Explore</button><button data-go="alerts">Alerts</button><button data-go="chat">Chat</button></div>
+<div class="tabs"><button data-go="home">Home</button><button data-go="explore">Explore</button><button data-go="alerts">Alerts</button><button data-go="chat">Chat</button><button id="themeTab" class="tab-theme" aria-label="Switch between light and dark mode"><svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg></button></div>
 
 <script src="main.js"></script>
 </body>
